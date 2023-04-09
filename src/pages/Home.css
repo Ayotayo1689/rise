@@ -1,15 +1,20 @@
 button{
     cursor: pointer;
 }
-/* .Home{
-    background: red;
-} */
+.Home{
+   margin: 0 auto;
+    max-width: 1100px;
+}
 .first-img{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 30px;
     animation: bounce 3s ease-in-out infinite;
     position: relative;
+    z-index: -5;
 }
+/* .teal{
+    width: 50%;
+} */
 @keyframes bounce{
     0%{
       top: -10px;
@@ -36,8 +41,10 @@ button{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
+    
 }
 .home-first{
+    /* margin-top: 80px; */
     max-width: 550px;
     display: flex;
     flex-direction: column;
@@ -248,7 +255,7 @@ button{
 .join{
     width: fit-content;
     color: rgb(1, 1, 33);
-    background: #6abfd2;
+    background: #6ec0aa;
     padding: 20px;
     border: none;
     border-radius: 10px;

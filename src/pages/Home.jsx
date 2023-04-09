@@ -23,7 +23,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div classname="Home">
+    <div className="Home">
        <Navbar />
        <div className="home-head">
         <div className="home-first">
@@ -116,7 +116,7 @@ const Home = () => {
         <div className="sec2-pt sec2-pt1">
             <img src={stocks} alt="" className="stocks" />
             <div className="sec-body">
-            <h1 className="asset" style={{fontSize:'40px',textAlign:'center',margin:'60px 0 15px 0'}}>
+            <h1 className="asset" style={{fontSize:'30px',textAlign:'center',margin:'60px 0 15px 0'}}>
             Stocks
        </h1>
        <p className="first-p" style={{textAlign:'center',fontSize:'17px'}}>
@@ -138,8 +138,8 @@ const Home = () => {
         <div className="sec2-pt sec2-pt2">
             <img src={estate} alt="" className="stocks" />
             <div className="sec-body">
-            <h1 className="asset" style={{fontSize:'40px',textAlign:'center',margin:'60px 0 15px 0'}}>
-            Stocks
+            <h1 className="asset" style={{fontSize:'30px',textAlign:'center',margin:'60px 0 15px 0'}}>
+            Real Estate
        </h1>
        <p className="first-p" style={{textAlign:'center',fontSize:'17px'}}>
        Our Real Estate plan is the sweet middle. Best for those who want a balance of good returns and medium risk. This plan invests in rented buildings in the US.
@@ -159,8 +159,8 @@ const Home = () => {
         <div className="sec2-pt sec2-pt3">
             <img src={fixed} alt="" className="stocks" />
             <div className="sec-body">
-                <h1 className="asset" style={{fontSize:'40px',textAlign:'center',margin:'60px 0 15px 0'}}>
-            Stocks
+                <h1 className="asset" style={{fontSize:'30px',textAlign:'center',margin:'60px 0 15px 0'}}>
+                Fixed Income
        </h1>
        <p className="first-p" style={{textAlign:'center',fontSize:'17px'}}>
        A low-risk asset perfect for anyone who wants to protect their money in a secure, appreciating currency, i.e. the dollar. For people who want to protect their hard-earned money from inflation while earning steady returns.
