@@ -47,7 +47,7 @@ const AboutUs = () => {
             </div>
         </div>
         <div className="width">
-        <h1 style={{fontSize:"45px", textAlign:'center', margin:"70px 0",fontWeight:"400"}}>Quick Facts</h1>
+        <h1 style={{fontSize:"45px", textAlign:'center', margin:"100px 0 0 0",fontWeight:"400"}}>Quick Facts</h1>
         <ul className="icons">
             <li>
             <div className="svg-border">
@@ -142,6 +142,14 @@ Real Estate portfolio: 11.39% YTD (2021)</p>
                 <p>Rise is built and maintained <br/> by these amazing people</p>
         </div>
         <div className="width">
+            <div className="contact-us">
+                <h1>Contact Us</h1>
+                <div className="contact-info">
+                    <p><span className='contact-label'>Address:  </span>2108 Greene st, box 5906, Columbia SC 29205</p>
+                    <p><span className='contact-label'>Phone number:  </span>+234 912 296 4215, +234 818 714 7405</p>
+                    <p><span className='contact-label'> Email:  </span>hello@risevest.com</p>
+                </div>
+            </div>
         <div className="home-sec7" style={{marginTop:"80px"}}> 
        <div className="home-sec home-sec-pos">
        <h1 className="">

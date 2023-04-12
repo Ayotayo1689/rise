@@ -6,6 +6,7 @@ import "./App.css"
 import LoginSignup from './pages/LoginSignup';
 import AboutUs from './pages/AboutUs';
 import InvestmentClub from './pages/InvestmentClub';
+import Faq from './pages/Faq';
 
 
 const  App = ()=> {
@@ -16,6 +17,7 @@ const  App = ()=> {
       <Route path="/" element={<Home />} />
         <Route path="login" element={<LoginSignup />} />
         <Route path="about-us" element={<AboutUs />} />
+        <Route path="faqs" element={<Faq />} />
         <Route path="investment-club" element={<InvestmentClub />} />
       </Routes>
     </div>

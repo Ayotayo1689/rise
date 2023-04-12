@@ -23,6 +23,25 @@
     font-weight: 800;
     font-family: 'Courier New', Courier, monospace;
 }
+.absolute-nav{
+    width: 100vw;
+    background: white;
+    position: fixed;
+    z-index: 1;
+}
+.navMenu{
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    gap: 20px;
+}
+.btns{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
 
 .nav{
     gap:30px;

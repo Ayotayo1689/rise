@@ -180,6 +180,30 @@ li{
     height: 230px;
     border-radius: 8px;
 }
+.contact-us{
+    margin-top: 80px;
+    height: fit-content;
+    display: flex;
+    gap: 30px;
+}
+.contact-us h1{
+    font-weight: 400;
+    font-size: 40px;
+}
+.contact-us p{
+   color: rgb(111, 110, 110);
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    max-width: 600px;
+    gap: 30px;
+}
+.contact-label{
+    font-weight: 600;
+   color: black;
+}
 @media only screen and (max-width:520px){
     .teal-img{
         width: 90vw;
@@ -235,8 +259,14 @@ li{
     width: 100%;
     height: 400px;
     }
+    .four-img-txt h1{
+        margin-top: 90px;
+        }
     .four-img{
         width: 100%;
         height:90vw;
+    }
+    .contact-us{
+       flex-direction: column;
     }
 }
