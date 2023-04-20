@@ -47,7 +47,7 @@ const LoginSignup = () => {
                 </div>
                 
                 </div>
-                <button>Login</button>
+                 <Link className="btnLink" to="/dashboard"><button>Login</button></Link>
                 <Link>I forgot my password</Link>
                 <p>Don't have an account? <span onClick={openSignup}>Sign up</span></p>
             </div>}

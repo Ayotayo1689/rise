@@ -7,6 +7,9 @@ import LoginSignup from './pages/LoginSignup';
 import AboutUs from './pages/AboutUs';
 import InvestmentClub from './pages/InvestmentClub';
 import Faq from './pages/Faq';
+import DashHome from './pages/dashboard/Dashpages/DashHome';
+import Profile from './pages/dashboard/Dashpages/Profile';
+import Transactions from './pages/dashboard/Dashpages/Transactions';
 
 
 const  App = ()=> {
@@ -19,6 +22,10 @@ const  App = ()=> {
         <Route path="about-us" element={<AboutUs />} />
         <Route path="faqs" element={<Faq />} />
         <Route path="investment-club" element={<InvestmentClub />} />
+        <Route path="dashboard" element={<DashHome />} />
+        <Route path="dashboard/profile" element={<Profile />} />
+        <Route path="dashboard/transactions" element={<Transactions />} />
+
       </Routes>
     </div>
   );

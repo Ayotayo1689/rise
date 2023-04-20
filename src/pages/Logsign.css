@@ -12,6 +12,12 @@
     width: 65%;
     height: 100%;
 }
+.btnLink{
+    width:100%;
+}
+.btnLink button{
+    width:100%;
+}
 .log-txt{
     background-image: url(../images/dots.baf2dd85.jpg);
     background-position: 0% 100%;
