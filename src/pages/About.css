@@ -270,3 +270,6 @@ li{
        flex-direction: column;
     }
 }
+.color{
+    color: #bbb9b9;
+}

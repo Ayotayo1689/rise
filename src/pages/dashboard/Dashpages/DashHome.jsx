@@ -4,6 +4,9 @@ import Dashtopnav from '../dashComp/Dashtopnav';
 import "./DashApp.css";
 import PieChartWithTooltip from '../../../components/PieChart';
 import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid,  Tooltip} from "recharts";
+import PersonIcon from '@mui/icons-material/Person';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 
 
@@ -52,19 +55,19 @@ const DashHome = () => {
             <div className="user-num">
               30
             </div>
-            <div className="box-title">User</div>
+            <div className="box-title"><PersonIcon/>User</div>
           </div>
           <div className="user-box">
             <div className="user-num">
               30k
             </div>
-            <div className="box-title">Balance</div>
+            <div className="box-title"><AccountBalanceWalletIcon/>Balance</div>
           </div>
           <div className="user-box">
             <div className="user-num">
               20k
             </div>
-            <div className="box-title">Withdrawable</div>
+            <div className="box-title"><LocalAtmIcon/>Withdrawable</div>
           </div>
           <div className="user-box">
             <div className="user-num">

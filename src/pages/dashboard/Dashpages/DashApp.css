@@ -2,10 +2,178 @@
      padding: 20px;
 }
 .nav-username{
-    color:rgb(0, 225, 255);
+    color: rgb(43, 228, 213);
     font-size:25px;
     font-weight:600;
 }
+.edit-user{
+    margin-top: 50px;
+    background-color: #026156;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    border-radius: 6px;
+    
+}
+.edit-card{
+    margin-top: 10px;
+    background-color: #026156;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dash-big-flex{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.profile-box{
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    /* border-radius: 10px; */
+    /* background:#d4fefe80; */
+}
+.card-num{
+    font-size:20px;
+    font-weight:500;
+    color:rgb(226, 226, 226);
+    margin-top:30px;
+}
+.card-name-info{
+    display:flex;
+    justify-content:space-between;
+    width:80%;
+}
+.visa-logo{
+    width:20%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.cardholder{
+    width:55%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+
+}
+.exp{
+    width:35%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+
+}
+.bank-card{
+
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    width: 80%;
+    height: 80%;
+    padding:15px;
+    /* background:url(./images/curved14.jp); */
+    background-image: linear-gradient(310deg, #1417279a 0%, #3a416f9a 100%), url(./images/curved14.jpg);
+    border-radius: 15px;
+}
+.info-name{
+    color:rgb(161, 161, 161);
+    font-weight:600;
+    font-size:14px;
+}
+.info-data{
+    color:rgb(255, 255, 255);
+    font-weight:600;
+    font-size:18px;
+}
+.profile-info-box{
+    background:#d4fefe80;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    border-radius: 10px;
+    /* border: 2px solid rgb(17, 0, 255); */
+}
+.profile-pic{
+    max-width: 300px;
+    max-height: 250px;
+    margin: 0 auto;
+}
+.pic{
+    /* border: 2px solid rgb(208, 255, 0); */
+    padding: 10px 20px;
+    flex: 1;
+}
+.profile-pic-container{
+    border-radius: 10px;
+    /* border: 2px solid green; */
+    flex: 1;
+    background:#d4fefe80;
+    /* overflow: hidden; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.card{
+    /* border: 2px solid red; */
+    padding: 20px;
+    flex: 1;
+}
+.profile-info{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    color: rgb(49, 49, 49);
+    font-weight: 500;
+}
+.label{
+ font-size: 30px;
+ color: #026156;
+ font-weight: 600;
+}
+.info{
+    font-size: 20px;
+}
+/* .visa-logo{
+
+} */
+.red{
+    width:25px;
+    height:25px;
+    position:relative;
+    left:5px;
+    border-radius:50%;
+    background:rgba(255, 0, 0, 0.815);
+
+}
+.orange{
+    width:25px;
+    height:25px;
+    position:relative;
+    border-radius:50%;
+    background:rgba(255, 166, 0, 0.808);
+    right:5px;
+
+}
+
+
+
 .Dashtopnav{
     background:#d4fefe80;
     border-radius:4px;
@@ -18,7 +186,7 @@
     justify-content:space-between;
 }
 .dash-nav{
-    background: rgba(120, 240, 249, 0.452);
+    background: #77f0f973;
     padding: 20px 0 20px 20px;
     display: flex;
     gap: 20px;
@@ -69,7 +237,10 @@
     font-size: 1.2rem;
     font-weight: 500;
     text-align:center;
-    color: rgba(0, 185, 126, 0.634);
+    color:  rgb(43, 228, 213);
+    display:flex;
+    gap:10px;
+    align-items:center;
 }
 .dash-nav a, .Link{
     width: 100%;
@@ -77,7 +248,7 @@
     display:flex;
     gap:20px;
     font-size: 20px;
-    color: rgb(2, 97, 86);
+    color: #026156;
     font-weight: 600;
     text-decoration: none;
 }

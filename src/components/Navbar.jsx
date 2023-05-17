@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import "./Navbar.css"
-import Secnav from './Secnav'
+import "./Navbar.css";
 import logo from "../images/bitstock-logo2.png"
 // import logo from "./logo.svg"
 

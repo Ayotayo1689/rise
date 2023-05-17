@@ -1,0 +1,42 @@
+.transaction-body{
+    width:100%;
+    display: flex;
+    gap: 20px;
+    height:82vh;
+}
+.rates{
+    flex: 2;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+   
+
+}
+.coin-img{
+    width:50px;
+}
+.rate-info{
+    padding: 20px;
+    height:70%;
+    border-radius:10px;
+     background:#b4fcfca9;
+}
+.rate-parent{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    height:30%;
+    min-height: 150px;
+}
+.buy{
+    border-radius:10px;
+     background:#b4fcfca9;
+    flex: 1;
+    
+}
+.rate{
+    border-radius:10px;
+     background:#b4fcfca9;
+    flex: 1;
+
+}
