@@ -50,7 +50,7 @@ const Profile = () => {
     <div className='dash'>
       <DashNav />
       <div className="dash-big dash-big-flex">
-       <div className="profile-box">
+       <div className="profile-box" >
         <div className="profile-info-box">
         <div className="profile-info">
           <div className="label">Name :</div>

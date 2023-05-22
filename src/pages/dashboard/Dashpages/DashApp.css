@@ -81,8 +81,9 @@
     display:flex;
     flex-direction:column;
     gap:40px;
-    width: 80%;
+    width: 100%;
     height: 80%;
+    max-width: 300px;
     padding:15px;
     /* background:url(./images/curved14.jp); */
     background-image: linear-gradient(310deg, #1417279a 0%, #3a416f9a 100%), url(./images/curved14.jpg);
@@ -313,9 +314,13 @@
         position: absolute;
         left: 220px;
     }
+    .profile-box{
+        flex-direction: column;
+    }
 }
 @media only screen and (max-width:500px) {
     .text-box{
-        min-width: 390px;
+        min-width: 100%;
     }
+    
 }

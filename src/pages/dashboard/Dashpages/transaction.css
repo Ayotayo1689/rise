@@ -9,17 +9,51 @@
     display:flex;
     flex-direction:column;
     gap:20px;
+    /* border: 2px solid blue; */
+    /* overflow: hidden; */
    
 
 }
 .coin-img{
     width:50px;
 }
+.test-div{
+    border: 2px solid green;
+    max-height: 70%;
+    overflow-y: scroll;
+}
 .rate-info{
     padding: 20px;
-    height:70%;
+    height:600px;
     border-radius:10px;
-     background:#b4fcfca9;
+    border: 2px solid red;
+    overflow: hidden;
+    /* background:#b4fcfca9; */
+}
+
+.table-data{
+    width:100%;
+    max-height:300px;
+    overflow-y:scroll;
+   }
+
+
+
+
+
+
+
+
+
+
+
+.rate-table{
+    border: 2px solid red;
+    height: 600px;
+    overflow: hidden;
+}
+.coin{
+    border: 2px solid green;
 }
 .rate-parent{
     display: flex;
@@ -32,11 +66,97 @@
     border-radius:10px;
      background:#b4fcfca9;
     flex: 1;
+    padding: 20px;
+    height: fit-content;
     
+}
+.buy h3{
+    margin-bottom: 30px;
 }
 .rate{
     border-radius:10px;
      background:#b4fcfca9;
     flex: 1;
+    font-weight: 700;
+    font-size: 40px;
+    color: rgb(1, 52, 65);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
+}
+.get-back{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+.rate-title{
+    font-size: 18px;
+}
+.but-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+.buy-body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.but-input input{
+    height: 40px;
+    width: 100%;
+    padding-right: 20px;
+    text-align: right;
+    border-radius: 5px;
+    border: none;
+}
+.but-input input:focus{
+    border: none;
+    outline: 0.4px solid black;
+}
+.walletAdd input:focus{
+    border: none;
+    outline: none;
+}
+.walletAdd{
+    border: 0.4px solid black;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media only screen and (max-width:884px) {
+    .transaction-body{
+        flex-direction: column;
+    }
+    
+}
+@media only screen and (max-width:400px) {
+    .rate-parent{
+        flex-wrap: wrap;
+        
+    }
+    .rate{
+        flex: 1;
+        min-width: 30%;
+    }
+    .rate-sec{
+        flex-direction: row;
+    }
 }
