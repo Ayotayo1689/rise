@@ -24,6 +24,9 @@
     font-weight: 800;
     font-family: 'Courier New', Courier, monospace;
 }
+.logo img{
+    mix-blend-mode: hard-light;
+}
 .absolute-nav{
     width: 100vw;
     background: white;

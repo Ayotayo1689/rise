@@ -60,7 +60,7 @@ export default function AccordionSec() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          Leaving money in your Rise wallet automatically earns you interest.
+          Leaving money in your Bitstock wallet automatically earns you interest.
           </Typography>
         </AccordionDetails>
       </Accordion>

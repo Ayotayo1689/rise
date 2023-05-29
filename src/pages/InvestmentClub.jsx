@@ -16,10 +16,10 @@ const InvestmentClub = () => {
             <div className="home-head" style={{marginBottom:"20px"}}>
         <div className="home-first">
             <h1 className="first-head" style={{color:'black',fontSize:"45px"}}>
-            Join the Rise Telegram Community
+            Join the Bitstock Telegram Community
             </h1>
             <p className="first-p">
-            The telegram group was built because Rise understands that the journey to building wealth does not have to be lonely, and when you have questions on wealth building and accumulation, you don’t have to look far. The Rise investment club and its community are there to educate you on your investment questions.
+            The telegram group was built because Bitstock understands that the journey to building wealth does not have to be lonely, and when you have questions on wealth building and accumulation, you don’t have to look far. The Bitstock investment club and its community are there to educate you on your investment questions.
             </p>
             <button className='join' style={{color:"white", fontWeight:"600"}}>
            Join the commumity
@@ -54,7 +54,7 @@ const InvestmentClub = () => {
             </div>
             <div className="testimony">
                 <div className="test-p">
-                For me, the Rise Telegram Community serves as a great platform to soak up lots of invaluable information about finance, investments, savings, stock market, real estate and everything in between. I think there are members of the community that never sleep!
+                For me, the Bitstock Telegram Community serves as a great platform to soak up lots of invaluable information about finance, investments, savings, stock market, real estate and everything in between. I think there are members of the community that never sleep!
                 </div>
                 <div className="test-info">
                     <img src={test2} alt="" className="test" />
@@ -63,7 +63,7 @@ const InvestmentClub = () => {
             </div>
             <div className="testimony">
                 <div className="test-p">
-                A highlight for me as a Risevest user is the telegram group. Over here nobody is left behind when it comes to financial literacy, understanding the app and services provided by the risevest team.
+                A highlight for me as a Bitstock user is the telegram group. Over here nobody is left behind when it comes to financial literacy, understanding the app and services provided by the Bitstock team.
                 </div>
                 <div className="test-info">
                     <img src={test3} alt="" className="test" />

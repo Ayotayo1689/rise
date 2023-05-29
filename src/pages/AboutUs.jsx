@@ -7,7 +7,7 @@ import ceo2 from "../images/ceo-2.jpg"
 import ceo3 from "../images/ceo-3.jpg"
 import ceo4 from "../images/ceo-4.jpg"
 import Footer from '../components/Footer'
-
+import {Link} from 'react-router-dom'
 
 const AboutUs = () => {
   return (
@@ -19,7 +19,7 @@ const AboutUs = () => {
             Our Mission
             </h1>
             <p className="" style={{fontSize:"20px"}} >
-            Our mission at Rise is to connect our users to the best wealth creating opportunities in the world. Our goal is to help them create wealth and achieve their financial goals.
+            Our mission at Bitstock is to connect our users to the best wealth creating opportunities in the world. Our goal is to help them create wealth and achieve their financial goals.
             </p>
             </div>
             <div className="abt-empty">
@@ -40,9 +40,9 @@ const AboutUs = () => {
                 </div>
                 <div className="four-img-txt">
                     <h1 style={{fontWeight:"400"}}>About Us</h1>
-                    <p>The product and company known as Rise today began with an idea that sparked in 2014. We realized that due to currency shocks, high inflation rates and the impact of devaluation, most investment opportunities across emerging markets do not yield enough returns for investors to grow their wealth. This makes it difficult for people in these markets to achieve their financial goals.</p>
+                    <p>The product and company known as Bitstock today began with an idea that sparked in 2014. We realized that due to currency shocks, high inflation rates and the impact of devaluation, most investment opportunities across emerging markets do not yield enough returns for investors to grow their wealth. This makes it difficult for people in these markets to achieve their financial goals.</p>
 
-                    <p>To solve this problem, we built Rise as a simple way of connecting our users to dollar-denominated investments in developed markets, managed by a world class team using smart algorithms to guide our decisions, while helping our users become more financially literate.</p>
+                    <p>To solve this problem, we built Bitstock as a simple way of connecting our users to dollar-denominated investments in developed markets, managed by a world class team using smart algorithms to guide our decisions, while helping our users become more financially literate.</p>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@ const AboutUs = () => {
             <div className="svg-border">
             <svg width="1.375em" height="1.375em" viewBox="0 0 22 22" fill="none" class="text-primary"><path d="M5 3.355l1.043 1.77L5 9.082l2 1.98-.957 3.958L3.213 17M19 5.103l-3.778.659-2.074 1.415-2.074-2.074V2.881L9 1.407m2.525 8.94l3.97.248.52 2.036.959.787-1.192 1.278-.505 2.193-2.82 1.856.421-4.736-2.852-.778 1.5-2.885zM11 21c5.523 0 10-4.477 10-10S16.523 1 11 1 1 5.477 1 11s4.477 10 10 10z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </div>
-                <p>200,000+ people are investing with Rise</p>
+                <p>200,000+ people are investing with Bitstock</p>
             </li>
 
             <li>
@@ -139,7 +139,7 @@ Real Estate portfolio: 11.39% YTD (2021)</p>
         </div>
         </div>
         <div className="people">
-                <p>Rise is built and maintained <br/> by these amazing people</p>
+                <p>Bitstock is built and maintained <br/> by these amazing people</p>
         </div>
         <div className="width">
             <div className="contact-us">
@@ -147,7 +147,7 @@ Real Estate portfolio: 11.39% YTD (2021)</p>
                 <div className="contact-info">
                     <p><span className='contact-label'>Address:  </span>2108 Greene st, box 5906, Columbia SC 29205</p>
                     <p><span className='contact-label'>Phone number:  </span>+234 912 296 4215, +234 818 714 7405</p>
-                    <p><span className='contact-label'> Email:  </span>hello@risevest.com</p>
+                    <p><span className='contact-label'> Email:  </span>Bitstock@gmail.com</p>
                 </div>
             </div>
         <div className="home-sec7" style={{marginTop:"80px"}}> 
@@ -159,8 +159,8 @@ Real Estate portfolio: 11.39% YTD (2021)</p>
         Dollar investments that help you grow
         </p>
         <div className="first-btns">
-                <button className='btn1'> Login </button>
-                <button className='btn2'> Sign Up </button>
+                <Link to="/Login"><button className='btn1'> Login </button></Link>
+                <Link to="/Login"><button className='btn2'> Sign Up </button></Link>
             </div>
        </div>
        <img src={phone} alt="aly" className="phone" />

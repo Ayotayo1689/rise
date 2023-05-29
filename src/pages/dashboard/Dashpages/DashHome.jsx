@@ -7,10 +7,31 @@ import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid,  Tool
 import PersonIcon from '@mui/icons-material/Person';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import Card from '../dashComp/Card';
 
 
 
 const DashHome = () => {
+
+  const navigate = useNavigate();
+
+  const loggedIn = localStorage.getItem("userData")
+
+  useEffect(() => {
+    if(!loggedIn){
+    navigate('/login')
+
+  }else{
+    console.log(loggedIn);
+  }
+  }, []);
+
+
+
+  
+
   const UserData = [
     {
       name: "python",
@@ -48,6 +69,9 @@ const DashHome = () => {
   return ( 
     <div className='dash'>
       <DashNav />
+      {/* <div className="" style={{display:"none"}}>
+        <Card />
+      </div> */}
       <div className="dash-big">
         <Dashtopnav />
         <div className="parent-box">

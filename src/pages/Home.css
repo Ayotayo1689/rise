@@ -41,7 +41,9 @@ button{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
-    
+}
+.about-img{
+    width: 100%;
 }
 .home-first{
     /* margin-top: 80px; */
@@ -315,6 +317,9 @@ button{
  @media only screen and (max-width:767px) {
     .home-sec1{
        flex-direction: column-reverse;
+    }
+    .btn2{
+        padding:10px 20px;
     }
     .home-sec2{
         flex-direction: column-reverse;

@@ -8,7 +8,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import "./nav.css"
 
 const style = {
@@ -29,6 +29,14 @@ gap:"20px",
 };
 
 const DashNav = () => {
+
+  const navigate = useNavigate()
+
+  const logOut = ()=>{
+    localStorage.removeItem("userData");
+    localStorage.removeItem("cardData");
+    navigate('/')
+  }
     
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -61,7 +69,7 @@ const DashNav = () => {
             Are you sure you want to log out?
           </Typography>
           <Typography id="keep-mounted-modal-description" sx={{ m: "auto" }}>
-          <Button >YES</Button>
+          <Button onClick={logOut} >YES</Button>
           <Button keepMounted
         open={open}
         onClick={handleClose}>NO</Button>

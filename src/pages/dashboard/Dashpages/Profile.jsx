@@ -2,19 +2,34 @@ import { PhotoCamera } from '@mui/icons-material'
 import { Box, Button,  Modal, TextField} from '@mui/material'
 import React, { useState } from 'react'
 import DashNav from '../dashComp/DashNav'
-import pic from "./images/ceo-2.jpg"
+import pic from "./images/profile-icon.jpg"
 import AddCardIcon from '@mui/icons-material/AddCard';
+import axios from 'axios'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Card from '../dashComp/Card'
 // import card from "./images/curved14.jpg"
 
 const Profile = () => {
-  const userData = {
-    name:"Ayotayo",
-    email:"Ayotayo@gmail.com",
-    phoneNo:"08023725183",
-    country:"Nigeria",
-    state:"lagos",
-    houseNo:"house 2"
-  }
+  const navigate = useNavigate();
+
+  // const [userCard, setuserCard] = useState(false)
+  const [cardData, setCardData] = useState(null);
+
+
+
+  const loggedIn = localStorage.getItem("userData")
+  const userData = JSON.parse(loggedIn)
+
+  useEffect(() => {
+    if (!loggedIn) {
+      navigate('/login');
+    }
+  }, []);
+
+
+
+
   const style2 = {
     position: 'absolute',
     top: '50%',
@@ -35,6 +50,7 @@ const Profile = () => {
     bgcolor: 'background.paper',
     boxShadow: 24,
     p: 4,
+    textAlign:"center",
     
   };
   const [open, setOpen] = useState(false);
@@ -53,8 +69,12 @@ const Profile = () => {
        <div className="profile-box" >
         <div className="profile-info-box">
         <div className="profile-info">
-          <div className="label">Name :</div>
-          <div className="info">{userData.name}</div>
+          <div className="label">First name :</div>
+          <div className="info">{userData.firstName}</div>
+        </div>
+        <div className="profile-info">
+          <div className="label">Last Name :</div>
+          <div className="info">{userData.lastName}</div>
         </div>
         <div className="profile-info">
           <div className="label">Email :</div>
@@ -65,17 +85,17 @@ const Profile = () => {
           <div className="info">{userData.phoneNo}</div>
         </div>
         <div className="profile-info">
-          <div className="label">country :</div>
-          <div className="info">{userData.country}</div>
+          <div className="label">Ssn :</div>
+          <div className="info">{userData.ssn}</div>
         </div>
-        <div className="profile-info">
+        {/* <div className="profile-info">
           <div className="label">State :</div>
           <div className="info">{userData.state}</div>
         </div>
         <div className="profile-info">
           <div className="label">House No :</div>
           <div className="info">{userData.houseNo}</div>
-        </div>
+        </div> */}
          <button onClick={handleOpen} className="edit-user">
           Edit profile
         </button>
@@ -90,8 +110,10 @@ const Profile = () => {
       component="form"
       noValidate
       autoComplete="off">
-      <div>
-        <TextField
+      {/* <div> */}
+
+      Action not available 
+        {/* <TextField
           required
           id="outlined-required"
           label="Required"
@@ -102,9 +124,9 @@ const Profile = () => {
           id="outlined-required"
           label="Required"
           defaultValue="Hello World"
-        />
+        /> */}
         
-      </div>
+      {/* </div> */}
     </Box>
       </Modal>
 
@@ -119,33 +141,7 @@ const Profile = () => {
           </Button>
           </div>
           <div className="card">
-            <div className="bank-card" >
-
-            <div className="card-num">
-                1234  5678  9100  0000
-            </div>
-            <div style={{display:"flex",  height:'70px',justifyContent:"space-between"}}>
-                <div className="card-name-info">
-                    <div className="cardholder">
-                      <span className="info-name">Card Holder</span>
-                      <div className="info-data">Jack Peterson</div>
-                    </div>
-                    <div className="exp">
-                      <span className="info-name">Expires</span>
-                      <div className="info-data">11/22</div>
-                    </div>
-                </div>
-                <div className="visa-logo" >
-                <div className="red">
-
-                  </div>
-                  <div className="orange">
-
-                  </div>
-                </div>
-            </div>
-
-            </div>
+            <Card />
             <button onClick={handleOpen2} className="edit-card">
           Add Card <AddCardIcon/>
         </button>
@@ -170,21 +166,45 @@ const Profile = () => {
         <TextField
           // required
           id="outlined-required"
-          label="Card Holder"
+          label="First name"
           defaultValue=""
         />
-         <TextField
+        <TextField
           // required
           id="outlined-required"
-          label="Expires"
+          label="Last name"
           defaultValue=""
         />
+        <div className="card-flex" style={{display:"flex",gap:"15px"}}>
+        <TextField
+          // required
+          id="outlined-required"
+          label="Exp month"
+          defaultValue=""
+        />
+
+        <TextField
+          // required
+          id="outlined-required"
+          label="Exp year"
+          defaultValue=""
+        />  
+
         <TextField
           // required
           id="outlined-required"
           label="CVV"
           defaultValue=""
         />
+
+        </div>
+        
+        {/* <TextField
+          // required
+          id="outlined-required"
+          label="CVV"
+          defaultValue=""
+        /> */}
         <TextField
           // required
           id="outlined-required"

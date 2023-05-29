@@ -34,17 +34,19 @@ const Home = () => {
             We put your money in high quality assets that help you build wealth and achieve your financial goals.
             </p>
             <div className="first-btns">
-                <button className='btn1'> Login </button>
-                <button className='btn2'> Sign Up </button>
+                <Link to="/Login"><button className='btn1'> Login </button></Link>
+                <Link to="/Login"><button className='btn2'> Sign Up </button></Link>
             </div>
         </div>
         <img src={phone} alt="" className="first-img" />
        </div>
+       <div className="width">
        <div className="companies">
             <img src={img1} alt="" className='img1' />
             <img src={img2} alt="" className='img2' />
             <img src={img3} alt="" className='img3' />
             <img src={img4} alt="" className='img4' />
+       </div>
        </div>
        <div className="home-sec1">
        <div className="home-sec">
@@ -67,7 +69,7 @@ const Home = () => {
        Choose what's best for you
         </h1>
         <p className="first-p">
-        Unlike other platforms, Rise lets you pick between stocks, US real estate and fixed income, according to your risk appetite. That way you can spread your risk and tap into different investments all in one place.
+        Unlike other platforms, Bitstock lets you pick between stocks, US real estate and fixed income, according to your risk appetite. That way you can spread your risk and tap into different investments all in one place.
         </p>
         <Link className='sec-link'>
             Start investing now
@@ -82,7 +84,7 @@ const Home = () => {
        Set goals and reach them
         </h1>
         <p className="first-p">
-        You can invest towards a goal on Rise--retirement, higher education, save for your home or travel budgets. Or create a goal of your own and invest periodically to achieve them.
+        You can invest towards a goal on Bitstock--retirement, higher education, save for your home or travel budgets. Or create a goal of your own and invest periodically to achieve them.
         </p>
         <Link className='sec-link'>
             Start investing now
@@ -97,7 +99,7 @@ const Home = () => {
        We remember so you dont have to
         </h1>
         <p className="first-p">
-        Our Auto-invest feature makes it easy to stay consistent, even when you forget. Set a funding amount, frequency and payment method and Rise will automatically fund your investment, on schedule.
+        Our Auto-invest feature makes it easy to stay consistent, even when you forget. Set a funding amount, frequency and payment method and Bitstock will automatically fund your investment, on schedule.
         </p>
         <Link className='sec-link'>
             Start investing now
@@ -105,8 +107,8 @@ const Home = () => {
        </div>
        <img src={img8} alt="aly" className="img5" />
        </div>
-
-       <h1 className="asset" style={{fontSize:'40px',textAlign:'center',marginTop:'80px'}}>
+<div className="width">
+    <h1 className="asset" style={{fontSize:'40px',textAlign:'center',marginTop:'80px'}}>
             Asset Classes
        </h1>
        <p className="first-p" style={{textAlign:'center',margin:'20px 0 50px  0'}}>
@@ -178,6 +180,8 @@ const Home = () => {
 
         </div>
        </div>
+</div>
+       
        <div className="sec3">
         <img src={wealth} alt="" />
        <div className="home-sec3 ">
@@ -185,7 +189,7 @@ const Home = () => {
        Save for your future
         </h1>
         <p className="first-p">
-        With Rise, you achieve your financial goals faster. Save for school, your home, vacations, your children’s future and more.
+        With Bitstock, you achieve your financial goals faster. Save for school, your home, vacations, your children’s future and more.
         </p>
         <button className='buttons'>Start Saving</button>
        </div>
@@ -197,22 +201,22 @@ const Home = () => {
        What comfort do you have?
         </h1>
         <p className="sec4-p">
-        We have a professional engagement through a trusteeship agreement with Meristem Trustees Limited, who oversees investments on behalf of users and members of Risevest (Victoria Island) Cooperative Multipurpose Society Ltd. All assets are also held in regulated third parties in the relevant jurisdictions.
+        We have a professional engagement through a trusteeship agreement with Meristem Trustees Limited, who oversees investments on behalf of users and members of Bitstock Cooperative Multipurpose Society Ltd. All assets are also held in regulated third parties in the relevant jurisdictions.
         </p>
        </div>
        </div>
        <div className="home-sec5p" style={{margin:"80px 0"}}>
        <h1 className="home-sec1-h1" style={{textAlign:"center", color:"#15b4a9",marginBottom:'20px'}}>
-       From The People Who Use Rise
+       From The People Who Use Bitstock
         </h1>
         <p className="sec4-p" style={{maxWidth:"500px",textAlign:"center",margin:"0 auto"}}>
-        Our mission at Risevest is to empower more people just like you to achieve your personal financial goals.
+        Our mission at Bitstock is to empower more people just like you to achieve your personal financial goals.
         </p>
         </div>
         <div className="testimonies">
             <div className="testimony">
                 <div className="test-p">
-                Like everyone, I want to be protected from currency fluctuations and Rise helps me with that. The fixed income and real estate asset classes are my preferred things about Rise. I 💚 seeing how my returns perform on a daily basis. It demonstrates safety and also puts me at a lower risk of losing money!
+                Like everyone, I want to be protected from currency fluctuations and Bitstock helps me with that. The fixed income and real estate asset classes are my preferred things about Bitstock. I 💚 seeing how my returns perform on a daily basis. It demonstrates safety and also puts me at a lower risk of losing money!
                 </div>
                 <div className="test-info">
                     <img src={test1} alt="" className="test" />
@@ -221,7 +225,7 @@ const Home = () => {
             </div>
             <div className="testimony">
                 <div className="test-p">
-                I chose Rise because of its leadership, wealth of knowledge and the people who support them. I invest with Rise in order to protect my savings and investment from being depleted by devaluation and inflation that’s at an all-time high in Nigeria.
+                I chose Bitstock because of its leadership, wealth of knowledge and the people who support them. I invest with Bitstock in order to protect my savings and investment from being depleted by devaluation and inflation that’s at an all-time high in Nigeria.
                 </div>
                 <div className="test-info">
                     <img src={test2} alt="" className="test" />
@@ -231,7 +235,7 @@ const Home = () => {
             <div className="testimony">
                 <div className="test-p">
                 
-I don’t want to invest in separate stocks because I’m not a financial expert and I would rather trust my money in the hands of people like Rise who are skilled and knowledgeable.
+I don’t want to invest in separate stocks because I’m not a financial expert and I would rather trust my money in the hands of people like Bitstock who are skilled and knowledgeable.
                 </div>
                 <div className="test-info">
                     <img src={test3} alt="" className="test" />
@@ -245,7 +249,7 @@ I don’t want to invest in separate stocks because I’m not a financial expert
        Choose what's best for you
         </h1>
         <p className="first-p">
-        Unlike other platforms, Rise lets you pick between stocks, US real estate and fixed income, according to your risk appetite. That way you can spread your risk and tap into different investments all in one place.
+        Unlike other platforms, Bitstock lets you pick between stocks, US real estate and fixed income, according to your risk appetite. That way you can spread your risk and tap into different investments all in one place.
         </p>
         <button className='join'>
            Join our commumity
@@ -268,7 +272,10 @@ I don’t want to invest in separate stocks because I’m not a financial expert
        </div>
        <img src={phone} alt="aly" className="phone" />
        </div>
-       <Footer />
+       <div className="width">
+        <Footer />
+       </div>
+       
     </div>
   )
 }
