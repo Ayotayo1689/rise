@@ -8,18 +8,81 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Card from '../dashComp/Card'
-// import card from "./images/curved14.jpg"
+import './transaction.css'
 
 const Profile = () => {
-  const navigate = useNavigate();
-
-  // const [userCard, setuserCard] = useState(false)
-  const [cardData, setCardData] = useState(null);
-
 
 
   const loggedIn = localStorage.getItem("userData")
   const userData = JSON.parse(loggedIn)
+
+  const [cardSucess, setCardSucess] = useState(false)
+
+  const [cardErr, setCardErr] = useState(false)
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const [open2, setOpen2] = useState(false);
+  const handleOpen2 = () => setOpen2(true);
+  const handleClose2 = () => setOpen2(false);
+
+  const [formData, setFormData] = useState({
+    cardNo: '',
+    firstName: '',
+    lastName: '',
+    expMonth: '',
+    expYear: '',
+    cvv: '',
+    address: '',
+  });
+
+
+
+
+  const handleClick = () => {
+    axios.post(`https://bit-stock-api.vercel.app/users/${userData.id}/cards`, formData)
+      .then(function (response) {
+      console.log(response)
+        if (response) {
+          setCardSucess(true)
+          setTimeout(() => {
+            setCardSucess(false);
+          }, 3000);
+          setTimeout(() => {
+           localStorage.removeItem('userData')
+           navigate('/login');
+          }, 5000);
+        }
+      
+        // console.log(response.data);
+      })
+      .catch(function (error) {
+        if (error) {
+          setCardErr(true)
+          setTimeout(() => {
+            setCardErr(false);
+          }, 3000);
+        }
+      });
+      handleClose2();
+  };
+
+
+  const handleChange = (event) => {
+    const { id, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [id]: value,
+    }));
+  };
+
+
+  const navigate = useNavigate();
+
+  // const [userCard, setuserCard] = useState(false)
+  const [cardData, setCardData] = useState(null);
 
   useEffect(() => {
     if (!loggedIn) {
@@ -53,18 +116,32 @@ const Profile = () => {
     textAlign:"center",
     
   };
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  const [open2, setOpen2] = useState(false);
-  const handleOpen2 = () => setOpen2(true);
-  const handleClose2 = () => setOpen2(false);
+ 
 
 
   return (
     <div className='dash'>
+      {
+      cardSucess ? 
+      <div className="reg-modal">
+        Card registered 
+      </div>
+      :
+      <div style={{display:"none"}} className="reg-modal">
+
+      </div>
+      }
       <DashNav />
+      {
+      cardErr ? 
+      <div className="reg-modal-err">
+        failed to register card 
+      </div>
+      :
+      <div style={{display:"none"}} className="reg-modal">
+
+      </div>
+      }
       <div className="dash-big dash-big-flex">
        <div className="profile-box" >
         <div className="profile-info-box">
@@ -157,65 +234,87 @@ const Profile = () => {
       noValidate
       autoComplete="off">
       <div style={{display:"flex",flexDirection:"column",gap:'20px'}}>
+
+ 
+
+        {/* <TextField
+          id="cardNumber"
+          label="Card Number"
+          variant="outlined"
+          type="number"
+          value={formData.cardNumber}
+          onChange={handleChange}
+        /> */}
+
         <TextField
-          // required
-          id="outlined-required"
-          label="card number"
-          defaultValue=""
+          id="cardNo"
+          label="Card Number"
+          variant="outlined"
+          required
+          type="number"
+          value={formData.cardNo}
+          onChange={handleChange}
         />
+
+
         <TextField
-          // required
-          id="outlined-required"
-          label="First name"
-          defaultValue=""
+          id="firstName"
+          label="First Name"
+          variant="outlined"
+          value={formData.firstName}
+          onChange={handleChange}
         />
-        <TextField
-          // required
-          id="outlined-required"
-          label="Last name"
-          defaultValue=""
+         <TextField
+          id="lastName"
+          label="Last Name"
+          variant="outlined"
+          value={formData.lastName}
+          onChange={handleChange}
         />
         <div className="card-flex" style={{display:"flex",gap:"15px"}}>
-        <TextField
-          // required
-          id="outlined-required"
-          label="Exp month"
-          defaultValue=""
+         <TextField
+          id="expMonth"
+          label="Exp Month"
+          variant="outlined"
+          type="number"
+          value={formData.expMonth}
+          onChange={handleChange}
         />
 
         <TextField
-          // required
-          id="outlined-required"
-          label="Exp year"
-          defaultValue=""
-        />  
+          id="expYear"
+          label="Exp Year"
+          variant="outlined"
+          type="number"
+          value={formData.expYear}
+          onChange={handleChange}
+        /> 
 
         <TextField
-          // required
-          id="outlined-required"
+          id="cvv"
           label="CVV"
-          defaultValue=""
+          variant="outlined"
+          type="number"
+          value={formData.cvv}
+          onChange={handleChange}
         />
 
         </div>
         
-        {/* <TextField
-          // required
-          id="outlined-required"
-          label="CVV"
-          defaultValue=""
-        /> */}
-        <TextField
-          // required
-          id="outlined-required"
-          label="Address"
-          defaultValue=""
-        />
+       
+       <TextField
+        id="address"
+        label="Address"
+        variant="outlined"
+        value={formData.address}
+        onChange={handleChange}
+      />
         
       </div>
-      <button className="edit-card">
+      <button type="button" className="edit-card" onClick={handleClick}>
           Add Card <AddCardIcon/>
         </button>
+       
     </Box>
 </Modal> 
        
