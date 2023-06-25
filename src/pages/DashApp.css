@@ -2,7 +2,6 @@
      padding: 20px;
 }
 .nav-username{
-    color: rgb(43, 228, 213);
     font-size:25px;
     font-weight:600;
 }
@@ -86,7 +85,7 @@
     max-width: 300px;
     padding:15px;
     /* background:url(./images/curved14.jp); */
-    background-image: linear-gradient(310deg, #1417279a 0%, #3a416f9a 100%), url(./images/curved14.jpg);
+    background-image: linear-gradient(310deg, #1417279a 0%, #3a416f9a 100%), url(../images/curved14.jpg);
     border-radius: 15px;
 }
 .info-name{
@@ -176,21 +175,23 @@
 
 
 .Dashtopnav{
-    background:#d4fefe80;
+    background:none;
     border-radius:4px;
-    height:60px;
+    height:fit-content;
     width:100%;
     padding:10px;
     display:flex;
+    flex-direction: column;
     padding:0 20px;
-    align-items:center;
+    /* align-items:center; */
     justify-content:space-between;
 }
 .dash-nav{
-    background: #77f0f973;
-    padding: 20px 0 20px 20px;
+    position: relative;
+    background: white;
+    padding: 10px 10px 10px 20px;
     display: flex;
-    gap: 20px;
+    gap: 5px;
     flex-direction: column;
     transition-duration: 1s ease;
 }
@@ -209,6 +210,7 @@
     display: none;
   }
 .dash{
+    background: #F5F5F5;
     width: 100%;
     display: flex;
 }
@@ -221,24 +223,24 @@
 .user-box{
     flex: 1;
     min-width: 130px;
-    height: 150px;
+    height: 100px;
     border-radius: 8px;
     display: flex;
+    gap: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
-    font-weight: 700;
-    color: rgb(43, 228, 213);
-    background: #d4fefe80;
-    box-shadow: rgba(84, 150, 248, 0.07) 0px 1px 2px, rgba(84, 150, 248, 0.07) 0px 2px 4px, rgba(84, 150, 248, 0.07) 0px 4px 8px, rgba(84, 150, 248, 0.07) 0px 8px 16px, rgba(84, 150, 248, 0.07) 0px 16px 32px, rgba(84, 150, 248, 0.07) 0px 32px 64px;
-
+    color:  #6D6969;
+    background: white;
+}
+.user-num{
+    font-size: 16px;
 }
 .box-title{
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 600;
     text-align:center;
-    color:  rgb(43, 228, 213);
+    color:  rgb(0, 0, 0);
     display:flex;
     gap:10px;
     align-items:center;
@@ -247,33 +249,87 @@
     width: 100%;
     padding: 15px;
     display:flex;
-    gap:20px;
-    font-size: 20px;
-    color: #026156;
-    font-weight: 600;
+    gap:10px;
+    font-size: 16px;
+    font-weight: 400;
     text-decoration: none;
+    border-bottom: 0.3px solid rgb(244, 244, 244);
+
 }
-.Link{
-    position:relative;
-    /* top:100%; */
-    bottom:0px;
-}
-.dash-nav a:hover,.Link:hover{
-    background: #ffffff;
+.dash-nav a:hover, .Link:hover{
+    background: #f8f8f8;
+    border-radius: 8px;
+    color: #134E4A;
 }
 
+.inactive{
+    color: #A5A5A5;
+}
+
+.active{
+    color: white;
+    background: #134E4A;
+    border-radius: 8px;
+}
+
+
+.Link{
+    position:absolute;
+    bottom:20px;
+}
+
+
+
 .text-box{
+    flex: 2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* min-width: 400px; */
+    height: 250px;
+    padding: 10px 10px 10px 0;
+    border-radius: 8px;
+    background: #fff;
+
+}
+.text-box-pie{
     flex: 1;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-width: 412px;
-    height: fit-content;
-    padding: 20px 20px 20px 0;
+    position: relative;
+    height: 250px;
+    padding: 10px 10px 10px 0;
     border-radius: 8px;
-    background: #d4fefe80;
-    box-shadow: rgba(84, 150, 248, 0.07) 0px 1px 2px, rgba(84, 150, 248, 0.07) 0px 2px 4px, rgba(84, 150, 248, 0.07) 0px 4px 8px, rgba(84, 150, 248, 0.07) 0px 8px 16px, rgba(84, 150, 248, 0.07) 0px 16px 32px, rgba(84, 150, 248, 0.07) 0px 32px 64px;
-
+    background: #fff;
+}
+.pie-amount{
+    position: absolute;
+}
+.small{
+    font-size: 16px;color: #6D6969;
+}
+.circle{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.amount{
+    font-size: 20px;
+    font-weight: 600;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.head{
+    font-weight: 500;
+    font-size: 20px;
+}
+th, td{
+    margin-left: 20px;
 }
 .dash-x{
     display: none;
