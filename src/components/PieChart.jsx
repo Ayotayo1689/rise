@@ -26,18 +26,26 @@ const renderTooltipContent = ({ payload }) => {
 
 const PieChartWithTooltip = () => {
   return (
-    <PieChart width={300} height={250}>
+    <PieChart width={300} height={320}>
       <Pie
        data={data}
        cx="50%"
        cy="50%"
        startAngle={0}
        endAngle={360}
-       innerRadius={70}
-       outerRadius={100}
+       innerRadius={80}
+       outerRadius={120}
        fill="#8884d8"
-       paddingAngle={4}
+       paddingAngle={5}
        dataKey="userGain"
+        // data={data}
+        // dataKey="userGain"
+        // nameKey="name"
+        // cx="50%"
+        // cy="50%"
+        // outerRadius={80}
+        // labelLine={true}
+        // fill="#8884d8"
       >
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

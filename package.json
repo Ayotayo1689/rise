@@ -7,7 +7,6 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.13",
-    "@mui/x-data-grid": "^6.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -25,8 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node api.js && react-scripts start",
+    "build": "node api.js && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
