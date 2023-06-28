@@ -55,15 +55,15 @@
     padding: 20px;
     height:600px;
     border-radius:10px;
+    border: 2px solid red;
     overflow: hidden;
     /* background:#b4fcfca9; */
 }
 
 .table-data{
     width:100%;
-    padding: 0;
-    /* max-height:300px; */
-    /* overflow-y:scroll; */
+    max-height:300px;
+    overflow-y:scroll;
    }
 
 
@@ -71,50 +71,19 @@
 
 
 
-.next-prev :disabled{
- background: #BDBDBD;
-}
 
 
-.wallet-details{
-    border-radius: 20px;
-    width: 100%;
-    /* min-height: 80vh; */
-    background: white;
-    padding: 50px 50px 20px 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-.data{
-    display: flex;
-}
-.data-label{
-    font-size: 20px;
-    font-weight: 500;
-    min-width: 220px;
-    color: black;
-}
-.data-info{
-    font-size: 20px;
-    font-weight: 500;
-    min-width: 220px;
-    color: #5F5F5F;
-}
 
 
-.pagination{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
 
 .rate-table{
+    border: 2px solid red;
     height: 600px;
     overflow: hidden;
 }
-
+.coin{
+    border: 2px solid green;
+}
 .rate-parent{
     display: flex;
     width: 100%;
